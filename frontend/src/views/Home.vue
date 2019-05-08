@@ -40,14 +40,9 @@
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue';
 import json from '@/prem_league_table.json'
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  },
   data(){
       return{
           myJson: json

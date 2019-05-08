@@ -17,11 +17,6 @@ export default new Router({
       component: Home
     },
     {
-      path: '/positions',
-      name: 'positions',
-      component: () => import('./components/StandingsTable/StandingsTable.vue')
-    },
-    {
       path: '/predictions',
       name: 'predictions',
       component: Predictions
