@@ -6,6 +6,7 @@
             @getOffset="getOffset"
             @addMargin="addMargin"/>
         <div :style="`margin-bottom: ${margin}px`"></div>
+        <router-view></router-view>
     </div>
 </template>
 
@@ -22,7 +23,7 @@ export default {
     data() {
         return {
             margin: 0,
-            imageWidth: 12
+            imageWidth: 10.1
         };
     },
 
@@ -32,7 +33,9 @@ export default {
         },
 
         getOffset(offset) {
-            this.imageWidth = 3/28*offset+6;
+            if (offset >= 0) {
+                this.imageWidth = 1/14*offset+6.1;
+            }
         }
     }
 }
