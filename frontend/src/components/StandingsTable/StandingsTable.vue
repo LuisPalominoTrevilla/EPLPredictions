@@ -21,44 +21,7 @@
 </script>
 
 <template>
-    <div id="textExample">
-    <header class="color-wall">
-        <h3>Standings</h3>
-    </header>
-    <table class="table">
-                <thead>
-                    <tr>
-                        <th> Position</th>
-                        <th> Club</th>
-                        <th> Played</th>
-                        <th> Won</th>
-                        <th> Drawn</th>
-                        <th> Lost</th>
-                        <th> GF</th>
-                        <th> GA</th>
-                        <th> GD</th>
-                        <th> Points</th>
-                    </tr>
-                </thead>
-                <tr v-for="data in myJson.Data.tables[0].table" v-bind:key="data">
-                    <td>{{data.positionOverall}}</td>
-                    <td class="teamdiv">
-                        <div class="logo-container">
-                            <img class="team-logo" :src="getImgUrl(data.teamImg)" alt="">
-                        </div>
-                        {{data.teamName}}
-                    </td>
-                    <td>{{data.playedTotal}}</td>
-                    <td>{{data.winTotal}}</td>
-                    <td>{{data.drawTotal}}</td>
-                    <td>{{data.lossTotal}}</td>
-                    <td>{{data.goalsForTotal}}</td>
-                    <td>{{data.goalsAgainstTotal}}</td>
-                    <td>{{data.goalDifferenceTotal}}</td>
-                    <td>{{data.pointsOverall}}</td>
-                </tr>
-            </table>
-    </div>
+    
 </template>
 
 <style lang="scss" scoped>

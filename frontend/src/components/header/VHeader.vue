@@ -13,14 +13,11 @@
 <script>
 import VMenu from './VMenu.vue';
 import TeamListing from './TeamListing.vue';
-import StandingsTable from '../StandingsTable/StandingsTable.vue';
 
 export default {
     components: {
         VMenu,
         TeamListing,
-        // eslint-disable-next-line
-        StandingsTable,
     },
 
     data() {
