@@ -2,7 +2,7 @@
     <div>
         <img class="epl-logo" src="@/assets/premier-league.png" alt="">
         <team-listing></team-listing>
-        <v-menu></v-menu>
+        <v-menu @addMargin="margin => this.$emit('addMargin', margin)"/>
     </div>
 </template>
 
@@ -21,8 +21,9 @@ export default {
 <style lang="scss" scoped>
 .epl-logo {
     width: 7rem;
+    z-index: 2;
     left: 0;
     top: 0;
-    position: absolute;
+    position: fixed;
 }
 </style>
