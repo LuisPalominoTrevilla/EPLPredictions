@@ -1,8 +1,10 @@
 <template>
     <div>
-        <img class="epl-logo" src="@/assets/premier-league.png" alt="">
+        <img class="epl-logo" src="@/assets/premier-league-logo.png" alt="" :style="`width: ${imageWidth}rem`">
         <team-listing></team-listing>
-        <v-menu @addMargin="addMargin"/>
+        <v-menu
+            @getOffset="getOffset"
+            @addMargin="addMargin"/>
         <div :style="`margin-bottom: ${margin}px`"></div>
     </div>
 </template>
@@ -19,13 +21,18 @@ export default {
 
     data() {
         return {
-            margin: 0
+            margin: 0,
+            imageWidth: 12
         };
     },
 
     methods: {
         addMargin(margin) {
-        this.margin = margin;
+            this.margin = margin;
+        },
+
+        getOffset(offset) {
+            this.imageWidth = 3/28*offset+6;
         }
     }
 }
@@ -33,7 +40,6 @@ export default {
 
 <style lang="scss" scoped>
 .epl-logo {
-    width: 7rem;
     z-index: 2;
     left: 0;
     top: 0;

@@ -22,6 +22,7 @@ export default {
     },
     methods: {
         handleScroll () {
+            this.$emit('getOffset', this.$refs.menu.offsetTop - window.scrollY);
             if (this.$refs.menu.offsetTop - window.scrollY < 0 && this.lastRecordPos === -1) {
                 this.$emit('addMargin', this.$refs.menu.offsetHeight);
                 this.lastRecordPos = window.scrollY;
@@ -39,7 +40,7 @@ export default {
 <style lang="scss" scoped>
 .menu {
     background-color: #38003c;
-    padding-left: 10%;
+    padding-left: 12rem;
     font-size: 1.1rem;
 
     &.fix {
