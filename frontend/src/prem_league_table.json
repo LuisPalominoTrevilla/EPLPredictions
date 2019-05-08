@@ -51,6 +51,7 @@
         "table": [
           {
             "teamName": "Liverpool",
+            "teamImg": "Liverpool.png",
             "teamID": "4274F",
             "positionOverall": "1",
             "positionAtHome": "2",
@@ -82,6 +83,7 @@
           },
           {
             "teamName": "Manchester City",
+            "teamImg": "ManchesterCity.png",
             "teamID": "42719",
             "positionOverall": "2",
             "positionAtHome": "1",
@@ -113,6 +115,7 @@
           },
           {
             "teamName": "Tottenham",
+            "teamImg": "Tottenham.png",
             "teamID": "42739",
             "positionOverall": "3",
             "positionAtHome": "5",
@@ -144,6 +147,7 @@
           },
           {
             "teamName": "Chelsea",
+            "teamImg": "Chelsea.png",
             "teamID": "42743",
             "positionOverall": "4",
             "positionAtHome": "4",
@@ -175,6 +179,7 @@
           },
           {
             "teamName": "Arsenal",
+            "teamImg": "Arsenal.png",
             "teamID": "4274B",
             "positionOverall": "5",
             "positionAtHome": "3",
@@ -206,6 +211,7 @@
           },
           {
             "teamName": "Manchester United",
+            "teamImg": "ManchesterUnited.png",
             "teamID": "4273D",
             "positionOverall": "6",
             "positionAtHome": "6",
@@ -237,6 +243,7 @@
           },
           {
             "teamName": "Watford",
+            "teamImg": "Watford.png",
             "teamID": "42727",
             "positionOverall": "7",
             "positionAtHome": "10",
@@ -268,6 +275,7 @@
           },
           {
             "teamName": "Everton",
+            "teamImg": "Everton.png",
             "teamID": "42757",
             "positionOverall": "8",
             "positionAtHome": "7",
@@ -299,6 +307,7 @@
           },
           {
             "teamName": "Leicester City",
+            "teamImg": "LeicesterCity.png",
             "teamID": "42735",
             "positionOverall": "9",
             "positionAtHome": "13",
@@ -330,6 +339,7 @@
           },
           {
             "teamName": "Wolverhampton",
+            "teamImg": "Wolverhampton.png",
             "teamID": "426FD",
             "positionOverall": "10",
             "positionAtHome": "8",
@@ -361,6 +371,7 @@
           },
           {
             "teamName": "West Ham United",
+            "teamImg": "WestHamUnited.png",
             "teamID": "42741",
             "positionOverall": "11",
             "positionAtHome": "9",
@@ -392,6 +403,7 @@
           },
           {
             "teamName": "Crystal Palace",
+            "teamImg": "CrystalPalace.png",
             "teamID": "42705",
             "positionOverall": "12",
             "positionAtHome": "19",
@@ -423,6 +435,7 @@
           },
           {
             "teamName": "Newcastle United",
+            "teamImg": "NewcastleUnited.png",
             "teamID": "42745",
             "positionOverall": "13",
             "positionAtHome": "12",
@@ -454,6 +467,7 @@
           },
           {
             "teamName": "Bournemouth",
+            "teamImg": "Bournemouth.png",
             "teamID": "4276F",
             "positionOverall": "14",
             "positionAtHome": "11",
@@ -485,6 +499,7 @@
           },
           {
             "teamName": "Burnley",
+            "teamImg": "Burnley.png",
             "teamID": "42703",
             "positionOverall": "15",
             "positionAtHome": "14",
@@ -516,6 +531,7 @@
           },
           {
             "teamName": "Southampton",
+            "teamImg": "Southampton.png",
             "teamID": "42751",
             "positionOverall": "16",
             "positionAtHome": "16",
@@ -547,6 +563,7 @@
           },
           {
             "teamName": "Brighton & Hove Albion",
+            "teamImg": "BrightonHoveAlbion.png",
             "teamID": "42733",
             "positionOverall": "17",
             "positionAtHome": "15",
@@ -578,6 +595,7 @@
           },
           {
             "teamName": "Cardiff City",
+            "teamImg": "CardiffCity.png",
             "teamID": "42771",
             "positionOverall": "18",
             "positionAtHome": "17",
@@ -609,6 +627,7 @@
           },
           {
             "teamName": "Fulham",
+            "teamImg": "Fulham.png",
             "teamID": "4274D",
             "positionOverall": "19",
             "positionAtHome": "18",
@@ -640,6 +659,7 @@
           },
           {
             "teamName": "Huddersfield Town",
+            "teamImg": "HuddersfieldTown.png",
             "teamID": "4276D",
             "positionOverall": "20",
             "positionAtHome": "20",
