@@ -43,7 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .epl-logo {
-    z-index: 2;
+    z-index: 3;
     left: 0;
     top: 0;
     position: fixed;

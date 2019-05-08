@@ -19,13 +19,15 @@
                     <img class="team-logo" :src="getImgUrl(awayLogo)" alt="">
                     <p>{{awayTeam}}</p>
                 </b-col>
+                <b-col cols="12" class="text-center">
+                    <b-btn v-show="showPredictButton" class="predict">Predecir</b-btn>
+                </b-col>
             </b-row>
         </b-container>
     </div>
 </template>
 
 <script>
-import moment from 'moment';
 import VFixture from '@/components/VFixture.vue';
 
 import TeamSelector from '@/components/TeamSelector.vue';
@@ -43,6 +45,12 @@ export default {
             localLogo: '',
             awayLogo: ''
         };
+    },
+
+    computed: {
+        showPredictButton() {
+            return this.localTeam !== null && this.awayTeam !== null;
+        }
     },
 
     methods: {
@@ -87,5 +95,20 @@ h4 {
     color: #38003c;
     font-size: 1.5rem;
     margin-bottom: 2rem;
+}
+
+.predict,
+.predict:focus,
+.predict:active {
+    background-color: #38003c !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.predict:hover {
+    background-color: #520f57b0 !important;
+    color: #ffffff !important;
+    border-color: #520f57b0 !important;
+    box-shadow: none !important;
 }
 </style>

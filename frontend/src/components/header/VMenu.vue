@@ -48,6 +48,7 @@ export default {
 
 <style lang="scss" scoped>
 .menu {
+    z-index: 2;
     background-color: #38003c;
     padding-left: 12rem;
     font-size: 1.1rem;
