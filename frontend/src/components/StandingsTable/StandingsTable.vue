@@ -22,6 +22,9 @@
 
 <template>
     <div id="textExample">
+    <header class="color-wall">
+        <h3>Standings</h3>
+    </header>
     <table class="table">
                 <thead>
                     <tr>
@@ -75,7 +78,7 @@
         position: absolute;
     }
     
-    .table-bordered {
+    .table-bordered {
         border-top: 1px transparent;
         border-right: 1px transparent;
         border-bottom: 1px transparent;
@@ -95,4 +98,18 @@
     .teamdiv {
         border-right: 1px solid #ddd;
     }
+
+    .color-wall {
+    background-color: #eaff04;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+
+    h3 {
+        color: #38003c;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-left: 2rem;
+    }
+}
 </style>

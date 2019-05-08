@@ -3,6 +3,7 @@
         <b-nav-item :class="{'active': currentView === '/'}" @click="pushRoute('/')">Premier League</b-nav-item>
         <b-nav-item :class="{'active': currentView === '/predictions'}" @click="pushRoute('/predictions')">Predictions</b-nav-item>
         <b-nav-item :class="{'active': currentView === '/playground'}" @click="pushRoute('/playground')">Playground</b-nav-item>
+        <b-nav-item :class="{'active': currentView === '/positions'}" @click="pushRoute('/positions')">Standings</b-nav-item>
     </b-nav>
 </template>
 
