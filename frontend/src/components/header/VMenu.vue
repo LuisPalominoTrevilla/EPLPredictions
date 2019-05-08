@@ -2,7 +2,7 @@
     <b-nav ref="menu" class="menu" :class="fixMenu? 'fix' : ''">
         <b-nav-item :class="{'active': currentView === '/'}" @click="pushRoute('/')">Premier League</b-nav-item>
         <b-nav-item :class="{'active': currentView === '/predictions'}" @click="pushRoute('/predictions')">Predictions</b-nav-item>
-        <b-nav-item :class="{'active': currentView === '/'}" @click="pushRoute('/')">Playground</b-nav-item>
+        <b-nav-item :class="{'active': currentView === '/playground'}" @click="pushRoute('/playground')">Playground</b-nav-item>
     </b-nav>
 </template>
 
