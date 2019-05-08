@@ -6,20 +6,29 @@
         <b-container>
             <v-fixture
                 localName="Brighton and Hove Albion"
-                localLogo="@/assets/Logos/BrightonHoveAlbion.png"
+                localLogo="BrightonHoveAlbion.png"
                 awayName="Manchester City"
-                awayLogo="@/assets/Logos/ManchesterCity.png"/>
+                awayLogo="ManchesterCity.png"
+                :matchStart="nextDate"
+                :winner="1"/>
         </b-container>
     </div>
 </template>
 
 <script>
+import moment from 'moment';
 import VFixture from '@/components/VFixture.vue';
 
 export default {
-  components: {
+    components: {
         VFixture
-  }
+    },
+
+    computed: {
+        nextDate() {
+            return moment().add(4, 'days').toDate();
+        }
+    }
 }
 </script>
 
