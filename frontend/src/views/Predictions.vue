@@ -5,6 +5,7 @@
         </header>
         <b-container>
             <v-fixture
+                class="mt-5"
                 localName="Brighton and Hove Albion"
                 localLogo="BrightonHoveAlbion.png"
                 awayName="Manchester City"

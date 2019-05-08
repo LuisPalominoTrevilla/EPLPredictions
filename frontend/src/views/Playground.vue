@@ -6,8 +6,10 @@
         <b-container>
             <h4 class="mt-4">Selecciona el equipo local</h4>
             <team-selector @selected="selectLocalTeam"/>
+            <div class="separator"></div>
             <h4 class="mt-4">Selecciona el equipo visitante</h4>
             <team-selector @selected="selectAwayTeam"/>
+            <div class="separator"></div>
             <b-row class="mt-5">
                 <b-col class="text-center" v-if="localTeam !== null">
                     <h4>Equipo local seleccionado</h4>
@@ -143,5 +145,13 @@ h4 {
     color: #ffffff !important;
     border-color: #520f57b0 !important;
     box-shadow: none !important;
+}
+
+.separator {
+    height: 2px;
+    background-color: #38003c73;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
 }
 </style>
