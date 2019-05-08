@@ -1,6 +1,6 @@
 <template>
-  <div class="home" :style="`margin-top: ${margin}px`">
-    <v-header @addMargin="addMargin"></v-header>
+  <div class="home">
+    <v-header></v-header>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -15,18 +15,6 @@ export default {
   components: {
     HelloWorld,
     VHeader
-  },
-
-  data() {
-    return {
-      margin: 0
-    };
-  },
-
-  methods: {
-    addMargin(margin) {
-      this.margin = margin;
-    }
   }
 }
 </script>

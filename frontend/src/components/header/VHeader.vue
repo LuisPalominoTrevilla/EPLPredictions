@@ -2,7 +2,8 @@
     <div>
         <img class="epl-logo" src="@/assets/premier-league.png" alt="">
         <team-listing></team-listing>
-        <v-menu @addMargin="margin => this.$emit('addMargin', margin)"/>
+        <v-menu @addMargin="addMargin"/>
+        <div :style="`margin-bottom: ${margin}px`"></div>
     </div>
 </template>
 
@@ -14,6 +15,18 @@ export default {
     components: {
         VMenu,
         TeamListing
+    },
+
+    data() {
+        return {
+            margin: 0
+        };
+    },
+
+    methods: {
+        addMargin(margin) {
+        this.margin = margin;
+        }
     }
 }
 </script>
