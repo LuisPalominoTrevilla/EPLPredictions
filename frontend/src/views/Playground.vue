@@ -19,16 +19,25 @@
                     <img class="team-logo" :src="getImgUrl(awayLogo)" alt="">
                     <p>{{awayTeam}}</p>
                 </b-col>
-                <b-col cols="12" class="text-center">
-                    <b-btn v-show="showPredictButton" class="predict">Predecir</b-btn>
+                <b-col cols="12" class="text-center mb-5">
+                    <b-btn @click="predictMatch" v-show="showPredictButton" class="predict">Predecir</b-btn>
                 </b-col>
             </b-row>
+            <v-fixture
+                class="mb-4"
+                v-if="prediction !== null"
+                :localName="prediction.homeTeam"
+                :localLogo="prediction.homeLogo"
+                :awayName="prediction.awayTeam"
+                :awayLogo="prediction.awayLogo"
+                :winner="prediction.matchResult"/>
         </b-container>
     </div>
 </template>
 
 <script>
 import VFixture from '@/components/VFixture.vue';
+import axios from 'axios';
 
 import TeamSelector from '@/components/TeamSelector.vue';
 
@@ -43,7 +52,8 @@ export default {
             localTeam: null,
             awayTeam: null,
             localLogo: '',
-            awayLogo: ''
+            awayLogo: '',
+            prediction: null
         };
     },
 
@@ -66,6 +76,29 @@ export default {
         selectAwayTeam({ name, logo }) {
             this.awayTeam = name;
             this.awayLogo = logo;
+        },
+
+        predictMatch() {
+            const sendData = {
+                home: this.localTeam,
+                away: this.awayTeam
+            }
+            if (sendData.home === 'Brighton Hove Albion') {
+                sendData.home = 'Brighton & Hove Albion';
+            } else if (sendData.away === 'Brighton Hove Albion') {
+                sendData.away = 'Brighton & Hove Albion';
+            }
+            axios.post('http://localhost:4000/predictOne', sendData)
+            .then(({data}) => {
+                if (data.homeTeam === 'Brighton & Hove Albion') {
+                    data.homeLogo = 'BrightonHoveAlbion.png';
+                } else if (data.awayTeam === 'Brighton & Hove Albion') {
+                    data.awayLogo = 'BrightonHoveAlbion.png';
+                }
+                this.prediction = data;
+            }).catch(err => {
+                console.log(err);
+            })
         }
     }
 }
