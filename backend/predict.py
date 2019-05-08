@@ -65,27 +65,31 @@ def whoWins(homeTeam, awayTeam):
     #Get home team stats to fixtures
     df_home = df_table.loc[df_table['teamName'] == homeTeam]
     df_home = df_home.add_suffix('_homeTeam')
-
     #Get away team stats to fixtures
     df_away = df_table.loc[df_table['teamName'] == awayTeam]
     df_away = df_away.add_suffix('_awayTeam')
 
     df_awayDict = df_away.to_dict()
+    awaySmallDict = df_awayDict['teamName_awayTeam']
+    awayIndex = 0
+    for key, value in awaySmallDict.items():
+        awayIndex = key
+    print(df_awayDict)
     for key, value in df_awayDict.items():
-        df_home[key] = value[1]
+        df_home[key] = value[awayIndex]
     #Remove unneeded columns
     df_home = df_home.drop(['teamID_homeTeam', 'teamID_awayTeam'], axis=1)
     df_home['teamName_homeTeam'] = pd.to_numeric(df_home['teamName_homeTeam'], errors='coerce')
     df_home['teamName_awayTeam'] = pd.to_numeric(df_home['teamName_awayTeam'], errors='coerce')
-    #Replace team names with their id's
+    print(df_home)
     for number, teamName in categoryTeamDict.items():
         if(teamName == homeTeam):
-            df_home.set_value(5, 'teamName_homeTeam', int(number))
+            df_home.set_value(df_home['positionOverall_homeTeam'].values[0]-1, 'teamName_homeTeam', int(number))
         if(teamName == awayTeam):
-            df_home.set_value(5, 'teamName_awayTeam', int(number))
+            df_home.set_value(df_home['positionOverall_homeTeam'].values[0]-1, 'teamName_awayTeam', int(number))
     #Calculate winner
     winner = dtree.predict(df_home)
     return {'homeTeam':homeTeam, 'awayTeam': awayTeam, 'matchResult': int(winner[0])}
 
-result = whoWins('Manchester United', 'Manchester City')
+result = whoWins('Southampton', 'Fulham')
 print(result['matchResult'])

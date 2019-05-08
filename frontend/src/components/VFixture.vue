@@ -8,7 +8,7 @@
             <b-col class="text-center matchDate">
                 {{ formatedDate }}
             </b-col>
-            <b-col class="text-right">
+            <b-col v-show="matchStart !== null" class="text-right">
                 {{ awayName }}
                 <img class="team-logo" :src="getImgUrl(awayLogo)" alt="">
             </b-col>
@@ -45,8 +45,7 @@ export default {
             required: true
         },
         matchStart: {
-            type: Date,
-            required: true
+            type: Date
         },
         winner: {
             type: Number,
