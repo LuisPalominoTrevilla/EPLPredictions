@@ -1,5 +1,13 @@
 <template>
   <div id="app">
+    <b-row>
+      <b-col>
+        Hello
+      </b-col>
+      <b-col>
+        World
+      </b-col>
+    </b-row>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
